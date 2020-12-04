@@ -1,6 +1,6 @@
-import { Component } from 'react'
+import { Component } from 'react';
 import CardContainer from './CardContainer';
-
+import TeamContainer from './TeamContainer';
 const baseURL = 'http://localhost:7000/'
 const contestantURL = baseURL + 'contestants'
 
@@ -23,10 +23,24 @@ export default class Container extends Component {
             }
         )
     }
+
+    addToTeam = (contestant) => {
+        if(!this.state.myTeam.find(contest => contest.id === contestant.id) 
+        && 
+        this.state.myTeam.length < 5) {
+            this.setState({myTeam: [...this.state.myTeam, contestant]})
+        }
+    }
+        
+
+
+
+
     render() {
         return (
             <div>
-                <CardContainer contestants={this.state.contestants}/>
+                <TeamContainer myTeam={this.state.myTeam}/>
+                <CardContainer contestants={this.state.contestants} addToTeam={this.addToTeam}/>
             </div>
         )
     }

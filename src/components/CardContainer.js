@@ -4,7 +4,7 @@ export default function CardContainer(props) {
     const eachContestant = () => {
         return props.contestants.map(
             contestant => {
-                return <Card contestant={contestant} key={contestant.id} />
+                return <Card contestant={contestant} key={contestant.id} addToTeam={props.addToTeam} />
             }
         )
     }

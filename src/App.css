@@ -31,6 +31,21 @@ img {
 }
 
 .about {
-  margin: auto;
+  margin: 5px;
   background-color: hsl(350, 140%, 59%);
+}
+
+.team-section {
+  height: 200px;
+  background-color: hsl(350, 71%, 50%);
+  padding: 2rem;
+  margin-left: 47px;
+  margin-right: 47px;
+  overflow: hidden;
+}
+
+.team-div {
+  display: flex;
+  flex-direction: row;
+  
 }
