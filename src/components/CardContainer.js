@@ -1,5 +1,6 @@
 import React from 'react'
 import Card from './Card'
+
 export default function CardContainer(props) {
     const eachContestant = () => {
         return props.contestants.map(
